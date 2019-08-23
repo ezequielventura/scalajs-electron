@@ -2,8 +2,12 @@ package electron
 
 import nodejs.EventEmitter
 
+import scala.scalajs.js
 import scala.scalajs.js.Function
+//import scala.scalajs.js.annotation.JSGlobal
 
+//@js.native
+//@JSGlobal
 class Application private[electron](application: raw.Application) extends EventEmitter {
   override def emit(event: String, args: Any*): Unit = application.emit(event, args)
   override def getMaxListeners: Long = application.getMaxListeners

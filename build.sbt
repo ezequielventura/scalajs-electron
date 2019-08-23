@@ -1,17 +1,15 @@
 enablePlugins(ScalaJSPlugin)
-// Use Node.
-scalaJSUseRhino in Global := false
 
 lazy val scalaJSElectron = (project in file(".")).
   settings(
     organization := "com.mscharley",
     name := "scalajs-electron",
-    version := "0.2.0-SNAPSHOT",
-    scalaVersion := "2.11.8",
+    version := "0.3.0-SNAPSHOT",
+    scalaVersion := "2.12.8",
 
     resolvers += Resolver.sonatypeRepo("public"),
     libraryDependencies ++= Seq(
-      "com.mscharley" %%% "scalajs-nodejs" % "0.1.1"
+      "com.mscharley" %%% "scalajs-nodejs" % "0.3.0-SNAPSHOT"
     ),
 
     // Info for Sonatype.
